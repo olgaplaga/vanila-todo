@@ -52,11 +52,14 @@ if (todoInput.value === '') {
 
 function deleteElement(event) {
     const item = event.target;
-    // console.log(event.target.parentElement.parentElement)
+    const listElement = event.target.parentElement.parentElement;
+    console.log(event.target.parentElement.parentElement)
     if (item.className === 'trash-btn'){
-        event.target.parentElement.parentElement.remove()
-    } else if (item.className = 'complete-btn'){
-        event.target.parentElement.parentElement.classList.toggle('checked')
+        listElement.classList.add('delete-item');
+        listElement.addEventListener('transitionend', () => {listElement.remove()})
+    } else if (item.className === 'complete-btn'){
+        listElement.classList.toggle('checked')
+    
     }
      
 }

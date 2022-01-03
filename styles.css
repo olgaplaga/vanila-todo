@@ -59,13 +59,14 @@ form button:hover {
 
 .todo {
   margin: 0.5rem;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgb(255, 255, 255);
   font-size: 1rem;
   color: black;
   justify-content: space-between;
   align-items: center;
   display: flex;
   padding: 2%;
+  transition: all 0.5s ease;
 }
 s
 .todo li {
@@ -83,7 +84,6 @@ s
 
 .trash-btn {
   color: #e04b37;
-
 }
 
 
@@ -97,13 +97,18 @@ s
 }
 
 .checked {
-    opacity: 0.7;
+    opacity: 0.5;
     text-decoration: line-through;
 }
 
 .no-input {
     animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
 
+}
+
+.btn-field{
+    justify-content: center;
+    align-items: center;
 }
 
 @keyframes shake {
@@ -122,4 +127,8 @@ s
     40%, 60% {
       transform: translate3d(4px, 0, 0);
     }
+  }
+
+  .delete-item{
+      transform: translateY(8rem) rotateZ(20deg)
   }
