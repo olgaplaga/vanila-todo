@@ -80,6 +80,7 @@ s
   font-size: 1.1rem;
   padding-right: 0.5rem;
   justify-content: end;
+  background-color: white;
 }
 
 .trash-btn {
@@ -111,6 +112,21 @@ s
     align-items: center;
 }
 
+.select {
+    display: flex;
+    min-height: 1.5rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+select {
+    border: none;
+    min-width: 5rem;
+    text-align: center;
+    color: #e29058
+}
+
+
 @keyframes shake {
     10%, 90% {
       transform: translate3d(-1px, 0, 0);
@@ -132,3 +148,5 @@ s
   .delete-item{
       transform: translateY(8rem) rotateZ(20deg)
   }
+
+  
